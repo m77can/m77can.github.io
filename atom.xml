@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://m77can.github.io/"/>
-  <updated>2018-06-03T23:53:11.958Z</updated>
+  <updated>2018-08-29T14:20:13.946Z</updated>
   <id>http://m77can.github.io/</id>
   
   <author>
@@ -15,6 +15,54 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>ssh 密钥登录</title>
+    <link href="http://m77can.github.io/2018/08/29/ssh-%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95/"/>
+    <id>http://m77can.github.io/2018/08/29/ssh-密钥登录/</id>
+    <published>2018-08-29T14:12:04.000Z</published>
+    <updated>2018-08-29T14:20:13.946Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="ssh-密钥登录遇到的问题"><a href="#ssh-密钥登录遇到的问题" class="headerlink" title="ssh 密钥登录遇到的问题"></a>ssh 密钥登录遇到的问题</h1><p>将本地 <code>~/.ssh/id_rsa.pub</code> 中的 key 写入 远程主机的 <code>~/.ssh/authorized_keys</code> 中,登陆时不需要输入密码.</p><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="ssh-登录时提示-“Permissions-0644-for-‘ssh-id-rsa’-are-too-open”"><a href="#ssh-登录时提示-“Permissions-0644-for-‘ssh-id-rsa’-are-too-open”" class="headerlink" title="ssh 登录时提示 “Permissions 0644 for ‘ssh/id_rsa’ are too open”"></a>ssh 登录时提示 “Permissions 0644 for ‘ssh/id_rsa’ are too open”</h3><p>解决办法: 本地的 <code>~/.ssh/id_rsa</code> 权限不正确,可以修改为 600</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;ssh-密钥登录遇到的问题&quot;&gt;&lt;a href=&quot;#ssh-密钥登录遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;ssh 密钥登录遇到的问题&quot;&gt;&lt;/a&gt;ssh 密钥登录遇到的问题&lt;/h1&gt;&lt;p&gt;将本地 &lt;code&gt;~/.ssh/id_rsa.pu
+      
+    
+    </summary>
+    
+    
+      <category term="ssh" scheme="http://m77can.github.io/tags/ssh/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>用到的 linux 命令记录</title>
+    <link href="http://m77can.github.io/2018/06/05/command/"/>
+    <id>http://m77can.github.io/2018/06/05/command/</id>
+    <published>2018-06-05T09:55:09.000Z</published>
+    <updated>2018-06-05T10:11:31.773Z</updated>
+    
+    <content type="html"><![CDATA[<p>linux 命令比较多，很多经常不用会忘记。</p><h2 id="jobs-相关"><a href="#jobs-相关" class="headerlink" title="jobs 相关"></a>jobs 相关</h2><ul><li><code>command &amp;</code> 让进程在后台运行</li><li><code>ctrl + z</code> 当前命令后台，并暂停</li><li><code>jobs</code> 查看后台运行的进程</li><li><code>fg %n</code> 让后台运行的进程n前台运行 (n 为 jobs 中的进程编号)</li><li><code>bg %n</code> 进程n后台运行 (n 为 jobs 中的进程编号)</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;linux 命令比较多，很多经常不用会忘记。&lt;/p&gt;
+&lt;h2 id=&quot;jobs-相关&quot;&gt;&lt;a href=&quot;#jobs-相关&quot; class=&quot;headerlink&quot; title=&quot;jobs 相关&quot;&gt;&lt;/a&gt;jobs 相关&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;command 
+      
+    
+    </summary>
+    
+    
+      <category term="linux" scheme="http://m77can.github.io/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>搭建 Hexo 博客遇到的问题</title>
