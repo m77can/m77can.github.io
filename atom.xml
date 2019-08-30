@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://m77can.github.io/"/>
-  <updated>2019-08-30T15:04:53.101Z</updated>
+  <updated>2019-08-30T15:07:59.864Z</updated>
   <id>http://m77can.github.io/</id>
   
   <author>
@@ -17,17 +17,18 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>online-tools</title>
+    <title>用过的在线工具简单总结</title>
     <link href="http://m77can.github.io/2019/08/30/online-tools/"/>
     <id>http://m77can.github.io/2019/08/30/online-tools/</id>
     <published>2019-08-30T14:57:33.000Z</published>
-    <updated>2019-08-30T15:04:53.101Z</updated>
+    <updated>2019-08-30T15:07:59.864Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="ssh-用过的在线工具简单总结"><a href="#ssh-用过的在线工具简单总结" class="headerlink" title="ssh 用过的在线工具简单总结"></a>ssh 用过的在线工具简单总结</h1><h2 id="composerize"><a href="#composerize" class="headerlink" title="composerize"></a><a href="https://composerize.com/" target="_blank" rel="noopener">composerize</a></h2><p>将<code>docker run</code> 命令 转化为对应的 docker-compose.yml 文件</p><a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<!-- # 用过的在线工具简单总结 --><h2 id="composerize"><a href="#composerize" class="headerlink" title="composerize"></a><a href="https://composerize.com/" target="_blank" rel="noopener">composerize</a></h2><p>将<code>docker run</code> 命令 转化为对应的 docker-compose.yml 文件</p><a id="more"></a>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;ssh-用过的在线工具简单总结&quot;&gt;&lt;a href=&quot;#ssh-用过的在线工具简单总结&quot; class=&quot;headerlink&quot; title=&quot;ssh 用过的在线工具简单总结&quot;&gt;&lt;/a&gt;ssh 用过的在线工具简单总结&lt;/h1&gt;&lt;h2 id=&quot;composerize&quot;&gt;&lt;a href=&quot;#composerize&quot; class=&quot;headerlink&quot; title=&quot;composerize&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://composerize.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;composerize&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;将&lt;code&gt;docker run&lt;/code&gt; 命令 转化为对应的 docker-compose.yml 文件&lt;/p&gt;
+      &lt;!-- # 用过的在线工具简单总结 --&gt;
+&lt;h2 id=&quot;composerize&quot;&gt;&lt;a href=&quot;#composerize&quot; class=&quot;headerlink&quot; title=&quot;composerize&quot;&gt;&lt;/a&gt;&lt;a href=&quot;https://composerize.com/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;composerize&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;将&lt;code&gt;docker run&lt;/code&gt; 命令 转化为对应的 docker-compose.yml 文件&lt;/p&gt;
     
     </summary>
     
@@ -37,20 +38,19 @@
   </entry>
   
   <entry>
-    <title>ssh 密钥登录</title>
+    <title>SSH 相关问题解决</title>
     <link href="http://m77can.github.io/2018/08/29/ssh-%E5%AF%86%E9%92%A5%E7%99%BB%E5%BD%95/"/>
     <id>http://m77can.github.io/2018/08/29/ssh-密钥登录/</id>
     <published>2018-08-29T14:12:04.000Z</published>
-    <updated>2018-08-29T14:20:13.946Z</updated>
+    <updated>2019-08-30T15:11:54.800Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="ssh-密钥登录遇到的问题"><a href="#ssh-密钥登录遇到的问题" class="headerlink" title="ssh 密钥登录遇到的问题"></a>ssh 密钥登录遇到的问题</h1><p>将本地 <code>~/.ssh/id_rsa.pub</code> 中的 key 写入 远程主机的 <code>~/.ssh/authorized_keys</code> 中,登陆时不需要输入密码.</p><h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><h3 id="ssh-登录时提示-“Permissions-0644-for-‘ssh-id-rsa’-are-too-open”"><a href="#ssh-登录时提示-“Permissions-0644-for-‘ssh-id-rsa’-are-too-open”" class="headerlink" title="ssh 登录时提示 “Permissions 0644 for ‘ssh/id_rsa’ are too open”"></a>ssh 登录时提示 “Permissions 0644 for ‘ssh/id_rsa’ are too open”</h3><p>解决办法: 本地的 <code>~/.ssh/id_rsa</code> 权限不正确,可以修改为 600</p>]]></content>
+    <content type="html"><![CDATA[<!-- # ssh 密钥登录遇到的问题 --><h2 id="ssh-不输入密码登陆"><a href="#ssh-不输入密码登陆" class="headerlink" title="ssh 不输入密码登陆"></a>ssh 不输入密码登陆</h2><p>将本地 <code>~/.ssh/id_rsa.pub</code> 中的 key 写入 远程主机的 <code>~/.ssh/authorized_keys</code> 中, 登陆时不需要输入密码.</p><h2 id="ssh-登录时提示-“Permissions-0644-for-‘ssh-id-rsa’-are-too-open”"><a href="#ssh-登录时提示-“Permissions-0644-for-‘ssh-id-rsa’-are-too-open”" class="headerlink" title="ssh 登录时提示 “Permissions 0644 for ‘ssh/id_rsa’ are too open”"></a>ssh 登录时提示 “Permissions 0644 for ‘ssh/id_rsa’ are too open”</h2><p>解决办法: 本地的 <code>~/.ssh/id_rsa</code> 权限不正确,可以修改为 600</p><a id="more"></a>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;h1 id=&quot;ssh-密钥登录遇到的问题&quot;&gt;&lt;a href=&quot;#ssh-密钥登录遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;ssh 密钥登录遇到的问题&quot;&gt;&lt;/a&gt;ssh 密钥登录遇到的问题&lt;/h1&gt;&lt;p&gt;将本地 &lt;code&gt;~/.ssh/id_rsa.pu
-      
+      &lt;!-- # ssh 密钥登录遇到的问题 --&gt;
+&lt;h2 id=&quot;ssh-不输入密码登陆&quot;&gt;&lt;a href=&quot;#ssh-不输入密码登陆&quot; class=&quot;headerlink&quot; title=&quot;ssh 不输入密码登陆&quot;&gt;&lt;/a&gt;ssh 不输入密码登陆&lt;/h2&gt;&lt;p&gt;将本地 &lt;code&gt;~/.ssh/id_rsa.pub&lt;/code&gt; 中的 key 写入 远程主机的 &lt;code&gt;~/.ssh/authorized_keys&lt;/code&gt; 中, 登陆时不需要输入密码.&lt;/p&gt;
+&lt;h2 id=&quot;ssh-登录时提示-“Permissions-0644-for-‘ssh-id-rsa’-are-too-open”&quot;&gt;&lt;a href=&quot;#ssh-登录时提示-“Permissions-0644-for-‘ssh-id-rsa’-are-too-open”&quot; class=&quot;headerlink&quot; title=&quot;ssh 登录时提示 “Permissions 0644 for ‘ssh/id_rsa’ are too open”&quot;&gt;&lt;/a&gt;ssh 登录时提示 “Permissions 0644 for ‘ssh/id_rsa’ are too open”&lt;/h2&gt;&lt;p&gt;解决办法: 本地的 &lt;code&gt;~/.ssh/id_rsa&lt;/code&gt; 权限不正确,可以修改为 600&lt;/p&gt;
     
     </summary>
     
@@ -60,22 +60,23 @@
   </entry>
   
   <entry>
-    <title>用到的 linux 命令记录</title>
+    <title>linux 命令简单总结</title>
     <link href="http://m77can.github.io/2018/06/05/command/"/>
     <id>http://m77can.github.io/2018/06/05/command/</id>
     <published>2018-06-05T09:55:09.000Z</published>
-    <updated>2018-06-05T10:11:31.773Z</updated>
+    <updated>2019-08-30T15:11:41.084Z</updated>
     
-    <content type="html"><![CDATA[<p>linux 命令比较多，很多经常不用会忘记。</p><h2 id="jobs-相关"><a href="#jobs-相关" class="headerlink" title="jobs 相关"></a>jobs 相关</h2><ul><li><code>command &amp;</code> 让进程在后台运行</li><li><code>ctrl + z</code> 当前命令后台，并暂停</li><li><code>jobs</code> 查看后台运行的进程</li><li><code>fg %n</code> 让后台运行的进程n前台运行 (n 为 jobs 中的进程编号)</li><li><code>bg %n</code> 进程n后台运行 (n 为 jobs 中的进程编号)</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>linux 命令比较多，很多经常不用会忘记。用过的做一个简单记录</p><h2 id="jobs-相关"><a href="#jobs-相关" class="headerlink" title="jobs 相关"></a>jobs 相关</h2><ul><li><code>command &amp;</code> 让进程在后台运行</li><li><code>ctrl + z</code> 当前命令后台，并暂停</li><li><code>jobs</code> 查看后台运行的进程</li><li><code>fg %n</code> 让后台运行的进程n前台运行 (n 为 jobs 中的进程编号)</li><li><code>bg %n</code> 进程n后台运行 (n 为 jobs 中的进程编号)<a id="more"></a></li></ul>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;linux 命令比较多，很多经常不用会忘记。&lt;/p&gt;
+      &lt;p&gt;linux 命令比较多，很多经常不用会忘记。用过的做一个简单记录&lt;/p&gt;
 &lt;h2 id=&quot;jobs-相关&quot;&gt;&lt;a href=&quot;#jobs-相关&quot; class=&quot;headerlink&quot; title=&quot;jobs 相关&quot;&gt;&lt;/a&gt;jobs 相关&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;command 
-      
+&lt;li&gt;&lt;code&gt;command &amp;amp;&lt;/code&gt; 让进程在后台运行&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;ctrl + z&lt;/code&gt; 当前命令后台，并暂停&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;jobs&lt;/code&gt; 查看后台运行的进程&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fg %n&lt;/code&gt; 让后台运行的进程n前台运行 (n 为 jobs 中的进程编号)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bg %n&lt;/code&gt; 进程n后台运行 (n 为 jobs 中的进程编号)
     
     </summary>
     
@@ -89,14 +90,14 @@
     <link href="http://m77can.github.io/2018/06/04/%E6%90%AD%E5%BB%BAHexo%E5%8D%9A%E5%AE%A2/"/>
     <id>http://m77can.github.io/2018/06/04/搭建Hexo博客/</id>
     <published>2018-06-03T22:14:15.000Z</published>
-    <updated>2018-08-30T08:40:49.131Z</updated>
+    <updated>2019-08-30T15:11:30.102Z</updated>
     
-    <content type="html"><![CDATA[<p>Hexo 安装和上手比较简单，但是在使用过程中还是遇到了一些问题，大部分可以通过查看文档解决。</p><h1 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h1><h2 id="添加标签"><a href="#添加标签" class="headerlink" title="添加标签"></a>添加标签</h2><p> 我使用的主题是没有 tags 的，所以要自己添加 tags，然后在添加过程中遇到不少问题。</p><ul><li>通过 <code>hexo new page tags</code> 创建新的页面，source 目录下对应生成 tags/index.md 文件。</li><li>在使用的主题的<code>_config.yml</code>中添加对应的 url 。</li><li>在当前主题的 layout 目录创建 tags.jade 文件 。</li><li><p>在 layout 添加 tags 对应的页面（显示所有的 tags），在这一步，出现了不少问题。</p><ul><li><p>首先是 page 如何和 layout 关联，这个主要是通过设在 tags/index.md 中指定对应的 layout （tags）。</p><ul><li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: tags</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-06-04 00:19:15</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li></ul></li><li><p>另外一点就是 hexo 模版之间的对应关系 。</p><ul><li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Template    | Page              | Fallback</span><br><span class="line">index       | Home              | page</span><br><span class="line">post        | Posts             | index</span><br><span class="line">page        | Pages             | index</span><br><span class="line">archive     | Archives          | index</span><br><span class="line">category    | Category archives | archive</span><br><span class="line">tag         | Tag archives      | archive</span><br></pre></td></tr></table></figure></li><li><p>所以 某一个具体的 tag 和 archives 是共用一个 archive.jade 文件， 因此可以通过 <code>page.category 、page.tag 、page.archive</code> 来判断当前的page 并做相应的处理。</p></li></ul></li></ul></li></ul><a id="more"></a><h3 id="首页摘要显示"><a href="#首页摘要显示" class="headerlink" title="首页摘要显示"></a>首页摘要显示</h3><ul><li>在查看搭建的博客首页时，发现文章列表中没有显示对应的摘要。这个如主要没有在对应 markdown 文件中添加<code>&lt;!-- more --&gt;</code> 注释。加上此注释后，注释前面的文字都会列为摘要。</li></ul>]]></content>
+    <content type="html"><![CDATA[<p>Hexo 安装和上手比较简单，但是在使用过程中还是遇到了一些问题，大部分可以通过查看文档解决。</p><h2 id="如何添加标签"><a href="#如何添加标签" class="headerlink" title="如何添加标签"></a>如何添加标签</h2><p> 我使用的主题是没有 tags 的，所以要自己添加 tags，然后在添加过程中遇到不少问题。</p><ul><li>通过 <code>hexo new page tags</code> 创建新的页面，source 目录下对应生成 tags/index.md 文件。</li><li>在使用的主题的<code>_config.yml</code>中添加对应的 url 。</li><li>在当前主题的 layout 目录创建 tags.jade 文件 。</li><li><p>在 layout 添加 tags 对应的页面（显示所有的 tags），在这一步，出现了不少问题。</p><ul><li><p>首先是 page 如何和 layout 关联，这个主要是通过设在 tags/index.md 中指定对应的 layout （tags）。</p><ul><li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: tags</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-06-04 00:19:15</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure></li></ul></li><li><p>另外一点就是 hexo 模版之间的对应关系 。</p><ul><li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Template    | Page              | Fallback</span><br><span class="line">index       | Home              | page</span><br><span class="line">post        | Posts             | index</span><br><span class="line">page        | Pages             | index</span><br><span class="line">archive     | Archives          | index</span><br><span class="line">category    | Category archives | archive</span><br><span class="line">tag         | Tag archives      | archive</span><br></pre></td></tr></table></figure></li><li><p>所以 某一个具体的 tag 和 archives 是共用一个 archive.jade 文件， 因此可以通过 <code>page.category 、page.tag 、page.archive</code> 来判断当前的page 并做相应的处理。</p></li></ul></li></ul></li></ul><a id="more"></a><h2 id="首页如何摘要显示"><a href="#首页如何摘要显示" class="headerlink" title="首页如何摘要显示"></a>首页如何摘要显示</h2><ul><li>在查看搭建的博客首页时，发现文章列表中没有显示对应的摘要。这个如主要没有在对应 markdown 文件中添加<code>&lt;!-- more --&gt;</code> 注释。加上此注释后，注释前面的文字都会列为摘要。</li></ul><h2 id="markdown-语法"><a href="#markdown-语法" class="headerlink" title="markdown 语法"></a>markdown 语法</h2><ul><li>连接<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">composerize</span>](<span class="link">https://composerize.com/  "this is title"</span>)</span><br></pre></td></tr></table></figure></li></ul>]]></content>
     
     <summary type="html">
     
       &lt;p&gt;Hexo 安装和上手比较简单，但是在使用过程中还是遇到了一些问题，大部分可以通过查看文档解决。&lt;/p&gt;
-&lt;h1 id=&quot;遇到的问题&quot;&gt;&lt;a href=&quot;#遇到的问题&quot; class=&quot;headerlink&quot; title=&quot;遇到的问题&quot;&gt;&lt;/a&gt;遇到的问题&lt;/h1&gt;&lt;h2 id=&quot;添加标签&quot;&gt;&lt;a href=&quot;#添加标签&quot; class=&quot;headerlink&quot; title=&quot;添加标签&quot;&gt;&lt;/a&gt;添加标签&lt;/h2&gt;&lt;p&gt; 我使用的主题是没有 tags 的，所以要自己添加 tags，然后在添加过程中遇到不少问题。&lt;/p&gt;
+&lt;h2 id=&quot;如何添加标签&quot;&gt;&lt;a href=&quot;#如何添加标签&quot; class=&quot;headerlink&quot; title=&quot;如何添加标签&quot;&gt;&lt;/a&gt;如何添加标签&lt;/h2&gt;&lt;p&gt; 我使用的主题是没有 tags 的，所以要自己添加 tags，然后在添加过程中遇到不少问题。&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;通过 &lt;code&gt;hexo new page tags&lt;/code&gt; 创建新的页面，source 目录下对应生成 tags/index.md 文件。&lt;/li&gt;
 &lt;li&gt;在使用的主题的&lt;code&gt;_config.yml&lt;/code&gt;中添加对应的 url 。&lt;/li&gt;
