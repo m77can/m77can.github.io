@@ -8,16 +8,15 @@
 <ul>
 <li><p>首先是 page 如何和 layout 关联，这个主要是通过设在 tags/index.md 中指定对应的 layout （tags）。</p>
 <ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: tags</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-06-04 00:19:15</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">layout: tags</span><br><span class="line">title: tags</span><br><span class="line">date: 2018-06-04 00:19:15</span><br><span class="line">type: tags</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
 </li>
 <li><p>另外一点就是 hexo 模版之间的对应关系 。</p>
 <ul>
-<li><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Template    | Page              | Fallback</span><br><span class="line">index       | Home              | page</span><br><span class="line">post        | Posts             | index</span><br><span class="line">page        | Pages             | index</span><br><span class="line">archive     | Archives          | index</span><br><span class="line">category    | Category archives | archive</span><br><span class="line">tag         | Tag archives      | archive</span><br></pre></td></tr></table></figure>
-<ul>
-<li>所以 某一个具体的 tag 和 archives 是共用一个 archive.jade 文件， 因此可以通过 <code>page.category 、page.tag 、page.archive</code> 来判断当前的page 并做相应的处理。</li>
-</ul>
+<li><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Template    | Page              | Fallback</span><br><span class="line">index       | Home              | page</span><br><span class="line">post        | Posts             | index</span><br><span class="line">page        | Pages             | index</span><br><span class="line">archive     | Archives          | index</span><br><span class="line">category    | Category archives | archive</span><br><span class="line">tag         | Tag archives      | archive</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>所以 某一个具体的 tag 和 archives 是共用一个 archive.jade 文件， 因此可以通过 <code>page.category 、page.tag 、page.archive</code> 来判断当前的page 并做相应的处理。</p>
 </li>
 </ul>
 </li>
@@ -28,4 +27,4 @@
 <h3 id="首页摘要显示"><a href="#首页摘要显示" class="headerlink" title="首页摘要显示"></a>首页摘要显示</h3><ul>
 <li>在查看搭建的博客首页时，发现文章列表中没有显示对应的摘要。这个如主要没有在对应 markdown 文件中添加<code>&lt;!-- more --&gt;</code> 注释。加上此注释后，注释前面的文字都会列为摘要。</li>
 </ul>
-</div></article></div></main><footer><div class="paginator"><a href="/2018/06/05/command/" class="prev">PREV</a></div><div class="copyright"><p>© 2015 - 2018 <a href="http://m77can.github.io">m77can</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/06/05/command/" class="prev">PREV</a></div><div class="copyright"><p>© 2015 - 2019 <a href="http://m77can.github.io">m77can</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
