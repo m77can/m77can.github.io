@@ -158,7 +158,7 @@
     <link href="http://m77can.github.io/2017/06/18/macbook-tools/"/>
     <id>http://m77can.github.io/2017/06/18/macbook-tools/</id>
     <published>2017-06-18T03:16:41.000Z</published>
-    <updated>2019-09-18T08:11:05.308Z</updated>
+    <updated>2019-09-18T08:12:18.196Z</updated>
     
     <content type="html"><![CDATA[<h2 id="终端相关"><a href="#终端相关" class="headerlink" title="终端相关"></a>终端相关</h2><ul><li><code>iTerm</code> (MacOS 上的终端 app)</li><li><code>oh-my-zsh</code> </li></ul><h2 id="终端工具-提升"><a href="#终端工具-提升" class="headerlink" title="终端工具-提升"></a>终端工具-提升</h2><ul><li><code>homebrew</code> (命令行安装程序)</li><li><code>autojump</code> (目录跳转)</li><li><code>zsh-syntax-highlighting</code>(高亮语法)</li></ul><h2 id="开发相关"><a href="#开发相关" class="headerlink" title="开发相关"></a>开发相关</h2><ul><li><code>sdk</code> (java 及其他工具的安装管理)</li><li><code>nvm</code> (管理 node 版本)</li><li><code>yarn</code>(node 依赖管理)</li><li><code>mycli</code>(mysql 命令行 支持 自动补全和语法高亮)</li><li><code>rvm</code> (ruby 版本管理)<a id="more"></a></li></ul><h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><ul><li><code>m-cli</code>(命令行操作 mac 的一些配置)</li><li><code>cmatrix</code></li></ul>]]></content>
     
@@ -182,6 +182,8 @@
     
     </summary>
     
+    
+      <category term="mac" scheme="http://m77can.github.io/tags/mac/"/>
     
   </entry>
   
