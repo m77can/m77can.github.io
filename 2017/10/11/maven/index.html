@@ -1,4 +1,4 @@
-<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> maven 笔记 · m77can's blog</title><meta name="description" content="maven 笔记 - m77can"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://m77can.github.io/atom.xml" title="m77can's blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/tags/" target="_self" class="nav-list-link">TAG</a></li><li class="nav-list-item"><a href="https://github.com/m77can" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">maven 笔记</h1><div></div><div class="post-info">Oct 11, 2017</div><div class="post-content"><h1 id="maven-相关"><a href="#maven-相关" class="headerlink" title="maven 相关"></a>maven 相关</h1><h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>maven 拥有三套相互独立的生命周期, 它们分别为clean、default和site</p>
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title> maven 笔记 · m77can's blog</title><meta name="description" content="maven 笔记 - m77can"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/favicon.png"><link rel="stylesheet" href="/css/apollo.css"><link rel="search" type="application/opensearchdescription+xml" href="http://m77can.github.io/atom.xml" title="m77can's blog"></head><body><div class="wrap"><header><a href="/" class="logo-link"><img src="/favicon.png" alt="logo"></a><ul class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" class="nav-list-link">BLOG</a></li><li class="nav-list-item"><a href="/archives/" target="_self" class="nav-list-link">ARCHIVE</a></li><li class="nav-list-item"><a href="/tags/" target="_self" class="nav-list-link">TAG</a></li><li class="nav-list-item"><a href="https://github.com/m77can" target="_blank" class="nav-list-link">GITHUB</a></li><li class="nav-list-item"><a href="/atom.xml" target="_self" class="nav-list-link">RSS</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">maven 笔记</h1><div></div><div class="post-info">Oct 11, 2017</div><div class="post-content"><h2 id="生命周期"><a href="#生命周期" class="headerlink" title="生命周期"></a>生命周期</h2><p>maven 拥有三套相互独立的生命周期, 它们分别为clean、default和site</p>
 <ul>
 <li><code>clean</code> 生命周期的目的是清理项目</li>
 <li><code>default</code> 生命周期的目的是构建项目</li>
@@ -6,14 +6,14 @@
 </ul>
 <h4 id="三套生命周期之间的关系"><a href="#三套生命周期之间的关系" class="headerlink" title="三套生命周期之间的关系:"></a>三套生命周期之间的关系:</h4><p>较之于生命周期阶段的前后依赖关系, 三套生命周期本身是相互独立的, 用户可以仅仅调用 clean 生命周期的某个阶段, 或者仅仅调用 default 生命周期的某个阶段, 而不会对其他生命周期产生任何影响.<br>例如, 当用户调用clean生命周期的clean阶段的时候, 不会触发default生命周期的任何阶段,<br>反之亦然, 当用户调用default生命周期的compile阶段的时候, 也不会触发clean生命周期的任何阶段. </p>
 <h4 id="重要的生命周期"><a href="#重要的生命周期" class="headerlink" title="重要的生命周期"></a>重要的生命周期</h4><ul>
-<li>validate: check if all information necessary for the build is available</li>
-<li>compile: compile the source code</li>
-<li>test-compile: compile the test source code</li>
-<li>test: run unit tests</li>
-<li>package: package compiled source code into the distributable format (jar, war, …)</li>
-<li>integration-test: process and deploy the package if needed to run integration tests</li>
-<li>install: install the package to a local repository</li>
-<li>deploy: copy the package to the remote repository</li>
+<li><code>validate</code>: check if all information necessary for the build is available</li>
+<li><code>compile</code>: compile the source code</li>
+<li><code>test</code>-compile: compile the test source code</li>
+<li><code>test</code>: run unit tests</li>
+<li><code>package</code>: package compiled source code into the distributable format (jar, war, …)</li>
+<li><code>integration</code>-test: process and deploy the package if needed to run integration tests</li>
+<li><code>install</code>: install the package to a local repository</li>
+<li><code>deploy</code>: copy the package to the remote repository</li>
 </ul>
 <h4 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h4><table>
 <thead>
@@ -139,8 +139,34 @@
 </tr>
 </tbody>
 </table>
-<h4 id="site"><a href="#site" class="headerlink" title="site"></a>site</h4><p>site生命周期的目的是建立和发布项目站点,Maven能够基于POM所包含的信息,自动生成一个友好的站点,方便团队交流和发布项目信息.该生命周期包含如下阶段:<br>|周期 | 描述|<br>|:—:|:—:|<br>| <code>pre-site</code>| 执行一些在生成项目站点之前需要完成的工作.|<br>| <code>site</code> |生成项目站点文档.|<br>| <code>post-site</code>| 执行一些在生成项目站点之后需要完成的工作.|<br>| <code>site-deploy</code> |将生成的项目站点发布到服务器上. |</p>
-<h2 id="默认插件"><a href="#默认插件" class="headerlink" title="默认插件"></a>默认插件</h2><table>
+<h4 id="site"><a href="#site" class="headerlink" title="site"></a>site</h4><p>site生命周期的目的是建立和发布项目站点,Maven能够基于POM所包含的信息,自动生成一个友好的站点,方便团队交流和发布项目信息.该生命周期包含如下阶段:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">周期</th>
+<th style="text-align:center">描述</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><code>pre-site</code></td>
+<td style="text-align:center">执行一些在生成项目站点之前需要完成的工作.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>site</code></td>
+<td style="text-align:center">生成项目站点文档.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>post-site</code></td>
+<td style="text-align:center">执行一些在生成项目站点之后需要完成的工作.</td>
+</tr>
+<tr>
+<td style="text-align:center"><code>site-deploy</code></td>
+<td style="text-align:center">将生成的项目站点发布到服务器上.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="插件"><a href="#插件" class="headerlink" title="插件"></a>插件</h2><h4 id="默认插件"><a href="#默认插件" class="headerlink" title="默认插件"></a>默认插件</h4><table>
 <thead>
 <tr>
 <th style="text-align:center">plugin</th>
@@ -186,11 +212,11 @@
 </tr>
 </tbody>
 </table>
-<h2 id="插件-、周期、目标-goal-的关系"><a href="#插件-、周期、目标-goal-的关系" class="headerlink" title="插件 、周期、目标(goal)的关系"></a>插件 、周期、目标(goal)的关系</h2><p>生命周期(lifecycle)由多个阶段(phase)组成, 每个阶段(phase)会挂接一到多个goal, goal 是 maven 里定义任务的最小单元.</p>
+<h4 id="插件-、周期、目标-goal-的关系"><a href="#插件-、周期、目标-goal-的关系" class="headerlink" title="插件 、周期、目标(goal)的关系"></a>插件 、周期、目标(goal)的关系</h4><p>生命周期(lifecycle)由多个阶段(phase)组成, 每个阶段(phase)会挂接一到多个goal, goal 是 maven 里定义任务的最小单元.</p>
 <ul>
-<li>mvn 运行周期和 goal(plugin:goal))</li>
+<li><code>mvn</code> 运行周期和 goal(plugin:goal))</li>
 <li>插件是goal的集合</li>
-<li>goal可以和周期绑定, 也可以不绑定</li>
+<li><code>goal</code>可以和周期绑定, 也可以不绑定</li>
 </ul>
 <h4 id="插件调用"><a href="#插件调用" class="headerlink" title="插件调用"></a>插件调用</h4><p>命令行下调用插件的格式如下:<br>　　<code>mvn groupId:artifactId:version:goal</code> ,其中 <code>groupId</code>、<code>artifactId</code>、<code>version</code> 共同表示了插件的坐标, <code>goal</code>则表示插件目标的方法.<br>第二种调用插件的格式:<br>　　<code>mvn 前缀:goal</code>,maven 通过查询插件仓库的元数据才得知插件前缀对应插件的 groupId、artifactId, 而如果插件是 maven 的核心插件,使用 super pom.xml中已经定义插件的版本,如果不是核心插件,则默认取最新的release版本.</p>
 <h4 id="插件开发"><a href="#插件开发" class="headerlink" title="插件开发"></a>插件开发</h4><ul>
@@ -206,4 +232,4 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">plugin</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;<span class="name">configuration</span>&gt;</span>  </span><br><span class="line">        <span class="tag">&lt;<span class="name">skipTests</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skipTests</span>&gt;</span>  </span><br><span class="line">    <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span>  </span><br><span class="line"><span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h4 id="获取-pom"><a href="#获取-pom" class="headerlink" title="获取 pom"></a>获取 pom</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 包含了 super pom 的 pom 文件</span></span><br><span class="line">mvn <span class="built_in">help</span>:effective-pom</span><br></pre></td></tr></table></figure>
 <h3 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h3><p><a href="https://blog.csdn.net/wangdong5678999/article/details/72848044" target="_blank" rel="noopener">Maven生命周期</a></p>
-</div></article></div></main><footer><div class="paginator"><a href="/2018/06/04/搭建Hexo博客/" class="prev">PREV</a><a href="/2017/09/28/crontab/" class="next">NEXT</a></div><div class="copyright"><p>© 2015 - 2019 <a href="http://m77can.github.io">m77can</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
+</div></article></div></main><footer><div class="paginator"><a href="/2018/06/04/搭建Hexo博客/" class="prev">上一篇</a><a href="/2017/09/28/crontab/" class="next">下一篇</a></div><div class="copyright"><p>© 2015 - 2019 <a href="http://m77can.github.io">m77can</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/pinggod/hexo-theme-apollo" target="_blank">hexo-theme-apollo</a>.</p></div></footer></div><script async src="//cdn.bootcss.com/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML" integrity="sha384-crwIf/BuaWM9rM65iM+dWFldgQ1Un8jWZMuh3puxb8TOY9+linwLoI7ZHZT+aekW" crossorigin="anonymous"></script></body></html>
